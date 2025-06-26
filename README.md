@@ -43,4 +43,4 @@ Designed to run programs using a quirky set of opcodes derived from substrings o
 2. Run the VM with the program provided via stdin:
 
 ```bash
-python pizzalang_vm.py < program.pizza
+python vm.py < program.pizza
