@@ -1,7 +1,6 @@
 # PizzaLang VM 🍕🖥️
 
-A minimalistic assembly-like virtual machine inspired by the letters of **"PIZZA"**.
-Designed to run programs using a quirky set of opcodes derived from substrings of the word "PIZZA".
+A minimalistic assembly-like virtual machine designed to run programs using a quirky set of opcodes derived from substrings of the word "PIZZA".
 
 ---
 
