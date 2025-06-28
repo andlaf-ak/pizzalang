@@ -10,8 +10,17 @@ class PizzaVM:
         self.tokens = []
         self.loop_stack = []
 
+    def sanitize_code(self, raw_code):
+        sanitized_lines = []
+        for line in raw_code.splitlines():
+            line = line.split(';', 1)[0].strip()  # Remove comments and trailing whitespace
+            if line:  # Skip empty lines
+                sanitized_lines.append(line)
+        return ' '.join(sanitized_lines)
+
     def run(self, code):
-        self.tokens = code.split()
+        sanitized_code = self.sanitize_code(code)
+        self.tokens = sanitized_code.split()
         self.ip = 0
 
         while self.ip < len(self.tokens):
